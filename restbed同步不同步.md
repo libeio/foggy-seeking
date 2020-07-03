@@ -38,3 +38,11 @@
 
 ## 结尾
 - 因为端口是公共资源，如果想要提高发送效率，可以尝试采用多端口发送。
+- 多端口发送，将发送过程分拆，同时在异步发送后立即解锁
+  ```c++
+    auto fut = restbed::Http::async(selectIter->second, nullptr);
+    guard_in.unlock();
+    fut.wait();
+    auto response = fut.get();
+  ```
+  会有崩溃或异常现象发生，这种做法不可行。
