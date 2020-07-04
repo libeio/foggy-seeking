@@ -5,7 +5,7 @@
   部启动一个可执行程序X进程(启动时长不足1s，但相对较为耗时)，可执行程序启动完毕后，
   向子进程三发送消息。示意如下:
   <h1 align="center">
-    <img width="321" height="201" src=".resource/question-a.png" alt="...">
+    <img width="321" height="201" src=".resource/question-a.jpg" alt="...">
   </h1>
 - 三个子进程通过向守护进程发送心跳，如果守护进程超过4s没有接收到来自某个子进程的心跳，
   那么守护进程就会重建该子进程。
