@@ -6,6 +6,7 @@
 - [try_lock的应用场景](try_lock的应用场景.md)
 - [对微服务中微的另一种理解](对微服务中微的另一种理解.md)
 - [直接异步与线程池的使用场景区分](直接异步与线程池的使用场景区分.md)
+- [smart_ptr也不错](smart_ptr也不错.md)
 
 ## 问题处理
 - [unique_lock不及时释放](unique_lock不及时释放.md)
