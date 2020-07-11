@@ -11,6 +11,7 @@
 ## 问题处理
 - [unique_lock不及时释放](unique_lock不及时释放.md)
 - [atomic很好](atomic很好.md)
+- [要在线程创建之后使用锁](要在线程创建之后使用锁.md)
 
 ## 编程随笔
 - 子进程使用 exit 退出，进程内启动进程通过 signal 退出;

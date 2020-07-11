@@ -9,13 +9,13 @@
                                  std::shared_ptr<std::condition_variable>>> mtx_conds;
     
     // 赋值
+    mtx_conds.emplace(port, std::make_pair(std::make_shared<std::mutex>(),
+                                             std::make_shared<std::condition_variable>()));
     m_threads.emplace(port, std::make_shared<std::thread>(std::bind(client_callback,
                                                                     std::placeholders::_1,
                                                                     std::placeholders::_2),
                                                           port,
                                                           this));
-    mtx_conds.emplace(port, std::make_pair(std::make_shared<std::mutex>(),
-                                             std::make_shared<std::condition_variable>()));
     std::this_thread::sleep_for(std::chrono::milliseconds(50));
     
     // 使用 - 生产线程
